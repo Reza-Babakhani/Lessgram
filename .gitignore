@@ -11,6 +11,7 @@ tools/
 # Local signing material
 *.keystore
 *.jks
+local-signing.ps1
 
 # Gradle / build
 .gradle/

@@ -34,13 +34,13 @@ you inspect the patches and avoid trusting a prebuilt APK.
 
 3. Install the signed result (if you did not pass `--install`).
    ```sh
-   adb install -r feurstagram.apk
+   adb install -r lessgram.apk
    ```
 
 ## Signing
 
-The bundle is signed during the build. Set `FEURSTAGRAM_KEYSTORE_PASS` (and
-optionally `FEURSTAGRAM_KEY_PASS`) to sign with `feurstagram.keystore`;
+The bundle is signed during the build. Set `LESSGRAM_KEYSTORE_PASS` (and
+optionally `LESSGRAM_KEY_PASS`) to sign with `lessgram.keystore`;
 otherwise a throwaway keystore is generated. Do not commit your keystore, and
 keep the same one to reinstall without losing app data.
 

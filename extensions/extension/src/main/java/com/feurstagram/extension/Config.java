@@ -117,14 +117,14 @@ public final class Config {
 
     /**
      * Whether the home feed is restricted to accounts you follow (chronological
-     * "Following" feed) instead of the recommended feed. Off by default. Not a
+     * "Following" feed) instead of the recommended feed. On by default. Not a
      * block_* surface, so the permanent lock never freezes it.
      */
     public static boolean isFollowingFeedOnly() {
-        return getBlocked("limit_following_feed", false);
+        return getBlocked("limit_following_feed", true);
     }
 
-    public static boolean isFeedBlocked()      { return getBlocked("block_feed", true); }
+    public static boolean isFeedBlocked()      { return getBlocked("block_feed", false); }
     public static boolean isExploreBlocked()   { return getBlocked("block_explore", true); }
     public static boolean isReelsBlocked()     { return getBlocked("block_reels", true); }
     /**
@@ -137,7 +137,7 @@ public final class Config {
     public static boolean isFriendsLaneBlocked() { return getBlocked("block_friends_lane", true); }
     public static boolean isStoriesBlocked()   { return getBlocked("block_stories", false); }
     public static boolean isInstantsBlocked()  { return getBlocked("block_instants", true); }
-    public static boolean isNotesBlocked()     { return getBlocked("block_notes", true); }
+    public static boolean isNotesBlocked()     { return getBlocked("block_notes", false); }
     public static boolean isSuggestedBlocked() { return getBlocked("block_suggested", true); }
     public static boolean isAdsBlocked()       { return getBlocked("block_ads", true); }
 

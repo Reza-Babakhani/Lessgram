@@ -163,7 +163,7 @@ public final class Settings {
             styleWindow(dialog, Color.TRANSPARENT, 0f);
             dialog.show();
         } catch (Throwable t) {
-            Toast.makeText(context, "Feurstagram settings unavailable here", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Lessgram settings unavailable here", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -406,7 +406,7 @@ public final class Settings {
         root.addView(header);
 
         TextView title = new TextView(context);
-        title.setText("Feurstagram");
+        title.setText("Lessgram");
         headline(title);
         header.addView(title);
 
@@ -484,17 +484,6 @@ public final class Settings {
         checkUpdate.setOnClickListener(v -> UpdateChecker.checkNow(context));
         column.addView(checkUpdate, stackedButtonParams(context, 12));
 
-        addSectionLabel(context, column, "Support");
-
-        Button sponsors = makeButton(context, "Donate on GitHub Sponsors", 0, ON_SURFACE, false);
-        sponsors.setBackground(outlined(context, OUTLINE_VARIANT));
-        sponsors.setOnClickListener(v -> openUrl(context, "https://github.com/sponsors/jean-voila"));
-        column.addView(sponsors, stackedButtonParams(context, 0));
-
-        Button coffee = makeButton(context, "☕  Buy me a coffee", SURFACE_CONTAINER_HIGH, ON_SURFACE, true);
-        coffee.setOnClickListener(v -> openUrl(context, "https://buymeacoffee.com/jean_voila"));
-        column.addView(coffee, stackedButtonParams(context, 10));
-
         // Pinned action bar. Two equal pills rather than end-aligned buttons: it
         // cannot overflow, however narrow the screen or long the label.
         LinearLayout actions = new LinearLayout(context);
@@ -543,7 +532,7 @@ public final class Settings {
             return;
         }
         showConfirm(context, "Restart Instagram?",
-                "Feurstagram will clear the cache and restart the app to apply your changes.",
+                "Lessgram will clear the cache and restart the app to apply your changes.",
                 "Restart", PRIMARY, ON_PRIMARY,
                 () -> CacheCleaner.clearAndRestart(context));
     }

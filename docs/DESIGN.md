@@ -40,7 +40,7 @@ than inventing one locally; that is what keeps the surfaces consistent.
 carry the ordinary accent and are made clear by their *wording* — "Enable lock", not
 "Enable" — and by a confirmation card that spells out the consequence.
 
-Emoji in user-visible strings (release notes, the coffee button) keep their own colours.
+Emoji in user-visible strings keep their own colours.
 That is fine: they are content, not chrome.
 
 ---

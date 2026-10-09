@@ -31,7 +31,7 @@ val clonePatch = resourcePatch(
 
     val packageName by stringOption(
         key = "packageName",
-        default = "com.instagram.android.feurstagram",
+        default = "com.instagram.android.lessgram",
         title = "Package name",
         description = "A new package name for the patched app.",
         required = true,
@@ -41,7 +41,7 @@ val clonePatch = resourcePatch(
 
     val appName by stringOption(
         key = "appName",
-        default = "Feurstagram",
+        default = "Lessgram",
         title = "App name",
         description = "A new app name (label). Entering \"Instagram\" skips changing the label.",
         required = true,

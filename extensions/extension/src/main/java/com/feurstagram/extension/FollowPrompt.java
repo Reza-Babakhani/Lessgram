@@ -33,7 +33,7 @@ import android.widget.TextView;
  */
 public final class FollowPrompt {
 
-    private static final String PROFILE_URL = "https://www.instagram.com/feurstagram_official/";
+    private static final String PROFILE_URL = "https://github.com/Reza-Babakhani/Lessgram";
 
     /**
      * Let the activity finish settling before a window goes on top of it: the tab
@@ -88,15 +88,15 @@ public final class FollowPrompt {
             LinearLayout card = Settings.addCard(context, frame);
 
             TextView title = new TextView(context);
-            title.setText("Follow Feurstagram");
+            title.setText("Follow Lessgram");
             Settings.titleLarge(title);
             card.addView(title);
 
             ScrollView bodyScroll = new ScrollView(context);
             bodyScroll.setVerticalScrollBarEnabled(false);
             TextView body = new TextView(context);
-            body.setText("Follow @feurstagram_official on Instagram to get a story every time "
-                    + "a new version is out: new features, fixes and Instagram updates.");
+            body.setText("Follow Lessgram on GitHub to get updates about new features, "
+                    + "fixes and Instagram compatibility.");
             Settings.body(body);
             body.setPadding(0, Settings.dp(context, 10), 0, 0);
             bodyScroll.addView(body);
