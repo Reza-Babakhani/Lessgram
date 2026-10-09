@@ -21,6 +21,10 @@ tasks.processResources {
     from(rootProject.file("assets/branding")) {
         include("lessgram-icon.png")
     }
+    from(rootProject.file("assets/branding/generated")) {
+        into("launcher")
+        include("mipmap-*/ic_launcher*.png")
+    }
 }
 
 kotlin {

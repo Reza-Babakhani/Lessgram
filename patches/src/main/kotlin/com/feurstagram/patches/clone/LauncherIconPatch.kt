@@ -5,9 +5,22 @@ import app.morphe.patcher.patch.resourcePatch
 import com.feurstagram.patches.shared.Constants.COMPATIBILITY_INSTAGRAM
 import java.io.File
 
-private const val ICON_RESOURCE = "@drawable/lessgram_launcher"
+private const val ICON_RESOURCE = "@mipmap/ic_launcher"
 
 private object LauncherIconResource
+
+private val ICON_ASSETS = listOf(
+    "mipmap-mdpi/ic_launcher.png",
+    "mipmap-mdpi/ic_launcher_round.png",
+    "mipmap-hdpi/ic_launcher.png",
+    "mipmap-hdpi/ic_launcher_round.png",
+    "mipmap-xhdpi/ic_launcher.png",
+    "mipmap-xhdpi/ic_launcher_round.png",
+    "mipmap-xxhdpi/ic_launcher.png",
+    "mipmap-xxhdpi/ic_launcher_round.png",
+    "mipmap-xxxhdpi/ic_launcher.png",
+    "mipmap-xxxhdpi/ic_launcher_round.png",
+)
 
 @Suppress("unused")
 val launcherIconPatch = resourcePatch(
@@ -24,14 +37,16 @@ val launcherIconPatch = resourcePatch(
             application.setAttribute("android:roundIcon", ICON_RESOURCE)
         }
 
-        val icon = get("res/drawable-nodpi/lessgram_launcher.png")
-        copyBundledIcon(icon)
+        for (asset in ICON_ASSETS) {
+            copyBundledIcon(asset)
+        }
     }
 }
 
-private fun ResourcePatchContext.copyBundledIcon(destination: File) {
-    val source = LauncherIconResource::class.java.getResourceAsStream("/lessgram-icon.png")
-        ?: error("Lessgram launcher icon was not bundled into the patch")
+private fun ResourcePatchContext.copyBundledIcon(asset: String) {
+    val source = LauncherIconResource::class.java.getResourceAsStream("/launcher/$asset")
+        ?: error("Lessgram launcher asset was not bundled into the patch: $asset")
+    val destination: File = get("res/$asset")
     source.use { input ->
         destination.outputStream().use { output -> input.copyTo(output) }
     }

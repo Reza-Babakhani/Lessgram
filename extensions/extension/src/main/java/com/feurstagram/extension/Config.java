@@ -136,7 +136,7 @@ public final class Config {
      */
     public static boolean isFriendsLaneBlocked() { return getBlocked("block_friends_lane", true); }
     public static boolean isStoriesBlocked()   { return getBlocked("block_stories", false); }
-    public static boolean isInstantsBlocked()  { return getBlocked("block_instants", true); }
+    public static boolean isInstantsBlocked()  { return getBlocked("block_instants", false); }
     public static boolean isNotesBlocked()     { return getBlocked("block_notes", false); }
     public static boolean isSuggestedBlocked() { return getBlocked("block_suggested", true); }
     public static boolean isAdsBlocked()       { return getBlocked("block_ads", true); }

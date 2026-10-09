@@ -30,7 +30,7 @@ The patches aim to preserve Direct Messages, stories, search, profiles, notifica
 | Suggested accounts | Blocked | Yes |
 | Ads | Blocked | Yes |
 | Notes | Visible | Yes |
-| Instants | Hidden | Yes |
+| Instants | Visible | Yes |
 | Notifications button | Visible | Yes |
 | Selected analytics and telemetry requests | Blocked | No |
 | Shopping and commerce preloads | Blocked | No |
