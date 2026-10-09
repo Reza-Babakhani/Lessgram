@@ -1,5 +1,7 @@
 # Lessgram
 
+![Lessgram logo](assets/branding/lessgram-icon.png)
+
 **A personal Android customization project based on FeurStagram, focused on keeping Instagram's useful social features with fewer distractions.**
 
 Lessgram is a fork of [FeurStagram](https://github.com/jean-voila/FeurStagram), originally developed by Jean Herail ([@jean-voila](https://github.com/jean-voila)) and the FeurStagram contributors. The original patches, runtime code, build tooling, and documentation provide the foundation for this project. Full credit for that work belongs to their respective authors.
